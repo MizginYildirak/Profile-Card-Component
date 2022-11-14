@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Outfit:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--dark-cyan);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::after {
+    content: "";
+    background: url("./images//bg-pattern-top.svg") repeat 100% 100%;
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    margin-left: -700px;
+    top: -200px;
+    z-index: -1;
+}
+
+body::before {
+    content: "";
+    background: url("./images//bg-pattern-top.svg") repeat 100% 100%;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    padding-left: 200px;
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+
+/* card-content*/
+
+.card {
+    height: 50vh;
+    width: 22vw;
+    border-radius: 12px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 8px 12px 24px rgb(0, 0, 0, 0.2);
+    position: relative;
+}
+
+
+/*card-top*/
+
+.card-top {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.card-profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.profile_img {
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+
+/* card-bottom */
+
+.user_name {
+    padding-top: 15px;
+    font-size: 20px;
+}
+
+hr {
+    margin-top: 10%;
+    color: rgb(167, 161, 161) !important;
+}
+
+.card-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-info small {
+    padding-left: 8px;
+    color: var(--dark-gray);
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 28px;
+    border-top: 2px solid rgb(237, 236, 236);
+}
+
+.stats {
+    margin-left: -5px;
+    margin-right: 5px;
+}
+
+.stat-num {
+    text-align: center;
+    font-weight: 700;
+    font-size: 19px;
+    color: #252525;
+}
+
+.stat-title {
+    text-align: center;
+    letter-spacing: 2px;
+    color: var(--dark-gray);
+    font-size: 12px;
+}
